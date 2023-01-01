@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #0096ff;
+}
+#container {
+  border: 1px solid white;
+  background-color: #e3edf7;
+}
