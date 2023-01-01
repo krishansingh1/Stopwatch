@@ -12,4 +12,6 @@ body {
 }
 #container {
   background-color: #e3edf7;
+  width: 25%;
+  height: auto;
 }
