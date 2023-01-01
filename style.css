@@ -10,8 +10,10 @@ body {
   font-family: "Poppins", sans-serif;
   color: #31456a;
 }
+
 #container {
   background-color: #e3edf7;
-  width: 25%;
+  width: 30%;
   height: auto;
+  margin: 0 auto;
 }
