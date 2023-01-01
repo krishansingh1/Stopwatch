@@ -126,12 +126,96 @@ body {
   transform: rotate(58deg);
 }
 
+.outer-clock-face .marking.marking-eleven {
+  transform: rotate(63deg);
+}
+
+.outer-clock-face .marking.marking-twelve {
+  transform: rotate(68deg);
+}
+
+.outer-clock-face .marking.marking-thirteen {
+  transform: rotate(73deg);
+}
+
+.outer-clock-face .marking.marking-fourteen {
+  transform: rotate(78deg);
+}
+
+.outer-clock-face .marking.marking-fifteen {
+  transform: rotate(83deg);
+}
+
+.outer-clock-face .marking.marking-sixteen {
+  transform: rotate(96deg);
+}
+
+.outer-clock-face .marking.marking-seventeen {
+  transform: rotate(103deg);
+}
+
+.outer-clock-face .marking.marking-eighteen {
+  transform: rotate(109deg);
+}
+
+.outer-clock-face .marking.marking-nineteen {
+  transform: rotate(115deg);
+}
+
+.outer-clock-face .marking.marking-twenty {
+  transform: rotate(121deg);
+}
+
+.outer-clock-face .marking.marking-twenty {
+  transform: rotate(121deg);
+}
+
+.outer-clock-face .marking.marking-twenty-one {
+  transform: rotate(127deg);
+}
+
+.outer-clock-face .marking.marking-twenty-two {
+  transform: rotate(132deg);
+}
+
+.outer-clock-face .marking.marking-twenty-three {
+  transform: rotate(137deg);
+}
+
+.outer-clock-face .marking.marking-twenty-four {
+  transform: rotate(142deg);
+}
+
+.outer-clock-face .marking.marking-twenty-five {
+  transform: rotate(147deg);
+}
+
+.outer-clock-face .marking.marking-twenty-six {
+  transform: rotate(153deg);
+}
+
+.outer-clock-face .marking.marking-twenty-seven {
+  transform: rotate(158deg);
+}
+
+.outer-clock-face .marking.marking-twenty-eight {
+  transform: rotate(163deg);
+}
+
+.outer-clock-face .marking.marking-twenty-nine {
+  transform: rotate(168deg);
+}
+
+.outer-clock-face .marking.marking-thirty {
+  transform: rotate(173deg);
+}
+
 .inner-clock-face {
   position: absolute;
-  top: 21.45%;
-  left: 42.05%;
-  width: 11rem;
-  height: 11rem;
+  top: 20.9%;
+  left: 41.8%;
+  width: 11.3rem;
+  height: 11.3rem;
   background: #e3edf7;
   border-radius: 100%;
   z-index: 1;
