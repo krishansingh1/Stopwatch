@@ -213,10 +213,28 @@ body {
 .inner-clock-face {
   position: absolute;
   top: 20.9%;
-  left: 41.8%;
+  left: 41.7%;
   width: 11.3rem;
   height: 11.3rem;
   background: #e3edf7;
   border-radius: 100%;
   z-index: 1;
+}
+
+#start_rest_btn_container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+#reset_btn {
+  padding: 0.5rem 1rem;
+}
+
+#start_btn {
+  padding: 0.5rem 1rem;
+}
+
+#lap_btn {
+  padding: 0.5rem 1rem;
 }
