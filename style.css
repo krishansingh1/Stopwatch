@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #0096ff;
+  background-color: #31456a;
   font-family: "Poppins", sans-serif;
   color: #31456a;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 #timer {
-  margin-left: 3.8rem;
+  margin-left: 3.6rem;
   margin-top: 5rem;
   font-size: 1.4rem;
   font-weight: 600;
