@@ -37,9 +37,70 @@ body {
   border-radius: 50%;
 }
 
+#clock::before {
+  content: "";
+  position: absolute;
+  border: solid rgb(187, 10, 10);
+  border-radius: 50%;
+  margin-left: 6.25rem;
+  margin-top: 30px;
+  z-index: 2;
+}
+
 #timer {
+  position: relative;
   margin-left: 3.5rem;
   margin-top: 5.2rem;
   font-size: 1.4rem;
   font-weight: 600;
+  z-index: 2;
+}
+
+.outer-clock-face::after {
+  transform: rotate(90deg);
+}
+
+.outer-clock-face::after,
+.outer-clock-face::before,
+.outer-clock-face .marking {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 34%;
+  margin-top: -7rem;
+  background: #31456a;
+  z-index: 0;
+  left: 49%;
+}
+
+.outer-clock-face .marking {
+  background: #31456a;
+  width: 1px;
+}
+
+.outer-clock-face .marking.marking-one {
+  transform: rotate(8deg);
+}
+
+.outer-clock-face .marking.marking-two {
+  transform: rotate(15deg);
+}
+
+.outer-clock-face .marking.marking-three {
+  transform: rotate(22deg);
+}
+
+.outer-clock-face .marking.marking-four {
+  transform: rotate(150deg);
+}
+
+.inner-clock-face {
+  position: absolute;
+  top: 21.5%;
+  left: 42%;
+  width: 11rem;
+  height: 11rem;
+  background: #e3edf7;
+  border-radius: 100%;
+  z-index: 1;
 }
