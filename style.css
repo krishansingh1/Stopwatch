@@ -83,21 +83,53 @@ body {
 }
 
 .outer-clock-face .marking.marking-two {
-  transform: rotate(15deg);
+  transform: rotate(14deg);
 }
 
 .outer-clock-face .marking.marking-three {
-  transform: rotate(22deg);
+  transform: rotate(20deg);
 }
 
 .outer-clock-face .marking.marking-four {
-  transform: rotate(150deg);
+  transform: rotate(26deg);
+}
+
+.outer-clock-face .marking.marking-five {
+  transform: rotate(32deg);
+}
+
+.outer-clock-face .marking.marking-six {
+  transform: rotate(37deg);
+}
+
+.outer-clock-face .marking.marking-six {
+  transform: rotate(38deg);
+}
+
+.outer-clock-face .marking.marking-seven {
+  transform: rotate(43deg);
+}
+
+.outer-clock-face .marking.marking-eight {
+  transform: rotate(48deg);
+}
+
+.outer-clock-face .marking.marking-nine {
+  transform: rotate(53deg);
+}
+
+.outer-clock-face .marking.marking-ten {
+  transform: rotate(58deg);
+}
+
+.outer-clock-face .marking.marking-ten {
+  transform: rotate(58deg);
 }
 
 .inner-clock-face {
   position: absolute;
-  top: 21.5%;
-  left: 42%;
+  top: 21.45%;
+  left: 42.05%;
   width: 11rem;
   height: 11rem;
   background: #e3edf7;
