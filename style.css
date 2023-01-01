@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #0096ff;
   font-family: "Poppins", sans-serif;
@@ -16,4 +17,25 @@ body {
   width: 30%;
   height: auto;
   margin: 0 auto;
+}
+
+#title {
+  margin: 1rem 6.5rem;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+}
+
+#clock {
+  border: 1px solid red;
+  margin-left: 4.5rem;
+  width: 13.5rem;
+  height: 13rem;
+  border-radius: 100%;
+}
+
+#timer {
+  margin-left: 3.8rem;
+  margin-top: 5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
