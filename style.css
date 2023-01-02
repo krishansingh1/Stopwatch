@@ -17,7 +17,7 @@ body {
   width: 30%;
   height: auto;
   margin: 0 auto;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   border-radius: 1rem;
 }
 
@@ -280,14 +280,14 @@ body {
     0 -3px 5.3px rgba(0, 0, 0, 0.048), 0 6.5px 10px rgba(0, 0, 0, 0.06),
     0 11.3px 17.9px rgba(0, 0, 0, 0.072), 0 21.8px 33.4px rgba(0, 0, 0, 0.086),
     0 50px 80px rgba(0, 0, 0, 0.12);
-    font-weight: 600;
+  font-weight: 600;
 }
 
 #lap_count {
   display: flex;
 }
 
-#lap_count span{
+#lap_count span {
   margin-left: 8px;
   margin-top: 3px;
   font-weight: 600;
