@@ -31,8 +31,7 @@ function changeIcon(anchor) {
 start_btn.click(function () {
     if (clicked) {
         $(this).off('click');
-        clearInterval(interval)
-        clicked = false;
+        clearInterval(interval);
     } else {
         startTime(minute, second, millisecond);
         clicked = true;
