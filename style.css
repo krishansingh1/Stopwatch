@@ -17,6 +17,8 @@ body {
   width: 30%;
   height: auto;
   margin: 0 auto;
+  padding-bottom: 1rem;
+  border-radius: 1rem;
 }
 
 #title {
@@ -266,11 +268,10 @@ body {
   cursor: pointer;
 }
 
-#lap_timer_container {
+#lap {
   display: flex;
   justify-content: space-between;
   margin: 2rem auto;
-  margin-bottom: 4rem;
   width: 70%;
   align-content: center;
   padding: 0.5rem 1rem;
@@ -279,4 +280,16 @@ body {
     0 -3px 5.3px rgba(0, 0, 0, 0.048), 0 6.5px 10px rgba(0, 0, 0, 0.06),
     0 11.3px 17.9px rgba(0, 0, 0, 0.072), 0 21.8px 33.4px rgba(0, 0, 0, 0.086),
     0 50px 80px rgba(0, 0, 0, 0.12);
+    font-weight: 600;
+}
+
+#lap_count {
+  display: flex;
+}
+
+#lap_count span{
+  margin-left: 8px;
+  font-weight: 300;
+  color: #6582b8;
+  font-size: 0.9rem;
 }
