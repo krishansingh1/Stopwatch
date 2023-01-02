@@ -40,7 +40,7 @@ body {
 #clock::before {
   content: "";
   position: absolute;
-  border: solid rgb(187, 10, 10);
+  border: solid #31456a;
   border-radius: 50%;
   margin-left: 6.25rem;
   margin-top: 20px;
@@ -74,7 +74,7 @@ body {
 }
 
 .outer-clock-face .marking {
-  background: #31456a;
+  background: #000000;
   width: 1px;
 }
 
@@ -237,10 +237,11 @@ body {
     0 -3px 5.3px rgba(0, 0, 0, 0.048), 0 6.5px 10px rgba(0, 0, 0, 0.06),
     0 11.3px 17.9px rgba(0, 0, 0, 0.072), 0 21.8px 33.4px rgba(0, 0, 0, 0.086),
     0 50px 80px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }
 
 #start_btn {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
   border: none;
@@ -249,10 +250,11 @@ body {
     0 -3px 5.3px rgba(0, 0, 0, 0.048), 0 6.5px 10px rgba(0, 0, 0, 0.06),
     0 11.3px 17.9px rgba(0, 0, 0, 0.072), 0 21.8px 33.4px rgba(0, 0, 0, 0.086),
     0 50px 80px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }
 
 #lap_btn {
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
   border: none;
@@ -261,4 +263,15 @@ body {
     0 -3px 5.3px rgba(0, 0, 0, 0.048), 0 6.5px 10px rgba(0, 0, 0, 0.06),
     0 11.3px 17.9px rgba(0, 0, 0, 0.072), 0 21.8px 33.4px rgba(0, 0, 0, 0.086),
     0 50px 80px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+#lap_timer_container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+  margin: 2rem auto;
+  width: 70%;
+  align-content: center;
+  padding: 0.5rem 1rem;
 }
