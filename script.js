@@ -5,9 +5,6 @@ const resetButton = $("#reset_btn");
 
 let startTime;
 let endTime;
-// let minute = 0;
-// let second = 0;
-// let millisecond = 0;
 let clicked = false;
 let interval;
 let time;
@@ -34,7 +31,8 @@ function changeIcon(anchor) {
 }
 
 function reset() {
-
+    time = "0:0:0";
+    timer.html(time);
 }
 
 start_btn.click(function () {
@@ -46,4 +44,9 @@ start_btn.click(function () {
         startTimer();
         clicked = true;
     }
+});
+
+resetButton.click(function () {
+    reset();
+    console.log(icon.classList);
 });
