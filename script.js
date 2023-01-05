@@ -1,6 +1,7 @@
 // console.log("StopWatch");
 const start_btn = $('#start_btn');
 const timer = $("#timer");
+const resetButton = $("#reset_btn");
 
 let startTime;
 let endTime;
@@ -30,6 +31,10 @@ function changeIcon(anchor) {
     var icon = anchor.querySelector('i');
     icon.classList.toggle('fa-play');
     icon.classList.toggle('fa-pause');
+}
+
+function reset() {
+
 }
 
 start_btn.click(function () {
