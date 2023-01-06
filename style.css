@@ -230,6 +230,19 @@ body {
   margin-bottom: 1rem;
 }
 
+#reset_btn {
+  margin-left: -0.2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border: none;
+  color: #31456a;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 -3px 5.3px rgba(0, 0, 0, 0.048), 0 6.5px 10px rgba(0, 0, 0, 0.06),
+    0 11.3px 17.9px rgba(0, 0, 0, 0.072), 0 21.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 50px 80px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
 #start_btn {
   /* margin-left: 1rem; */
   padding: 0.5rem 1rem;
