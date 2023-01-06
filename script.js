@@ -2,7 +2,6 @@ const start_btn = $('#start_btn');
 const timer = $("#timer");
 const lap_btn = $(".lap_btn");
 const lap_time_container = $("#lap_timer_container");
-
 let startTime;
 let endTime;
 let clicked = false;

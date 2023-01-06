@@ -49,13 +49,9 @@ body {
   z-index: 2;
 }
 
-#timer {
-  position: relative;
-  margin-left: 4rem;
-  margin-top: 5.2rem;
+.timer {
   font-size: 1.4rem;
   font-weight: 600;
-  z-index: 2;
 }
 
 .outer-clock-face::after {
@@ -69,7 +65,7 @@ body {
   position: absolute;
   width: 3px;
   height: 34%;
-  margin-top: -7rem;
+  margin-top: 5px;
   background: #31456a;
   z-index: 0;
   left: 49%;
@@ -221,6 +217,9 @@ body {
   background: #e3edf7;
   border-radius: 100%;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #start_rest_btn_container {
@@ -262,9 +261,6 @@ body {
   font-size: 1.5rem;
   border: none;
   color: #31456a;
-  background-color: #70785e;
-  opacity: 0.6;
-  cursor: not-allowed;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 -3px 5.3px rgba(0, 0, 0, 0.048), 0 6.5px 10px rgba(0, 0, 0, 0.06),
     0 11.3px 17.9px rgba(0, 0, 0, 0.072), 0 21.8px 33.4px rgba(0, 0, 0, 0.086),
@@ -307,10 +303,4 @@ body {
   color: #ffffff;
   position: absolute;
   bottom: 0;
-}
-
-.change_color {
-  background-color: #e3edf7;
-  opacity: 1;
-  cursor: pointer !important;
 }
