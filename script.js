@@ -15,14 +15,13 @@ function calculate() {
     let minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
     let milliseconds = Math.floor((elapsedTime % (1000 * 60)) / 100);
-    time = minutes + ':' + seconds + '.' + milliseconds;
+    time = minutes + ' : ' + seconds + ' : ' + milliseconds;
     timer.html(time);
 }
 
 let Clock = {
 
     startTimer: function () {
-        var self = this;
         startTime = new Date().getTime();
         this.interval = setInterval(calculate, 10);
     },
@@ -33,11 +32,11 @@ let Clock = {
     },
 
     resume: function () {
-        if (!this.interval) this.startTimer();
+        if (!this.interval) {
+            this.startTimer();
+        }
     }
 }
-
-
 
 function changeIcon(anchor) {
     var icon = anchor.querySelector('i');
@@ -55,6 +54,7 @@ function reset() {
 start_btn.click(function () {
     if (Clock.interval) {
         Clock.pause();
+        console.log(time);
     } else {
         Clock.resume();
     }
