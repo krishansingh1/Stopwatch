@@ -1,13 +1,11 @@
 const start_btn = $('#start_btn');
 const timer = $("#timer");
-const resetButton = $("#reset_btn");
 
 let startTime;
 let endTime;
 let clicked = false;
 let interval;
 let time;
-let modify_btn = $("#icon_class");
 
 function calculate() {
     endTime = new Date().getTime();
@@ -44,13 +42,6 @@ function changeIcon(anchor) {
     icon.classList.toggle('fa-pause');
 }
 
-function reset() {
-    time = "0:0:0";
-    timer.html(time);
-}
-
-// Clock.startTimer();
-
 start_btn.click(function () {
     if (Clock.interval) {
         Clock.pause();
@@ -58,10 +49,4 @@ start_btn.click(function () {
     } else {
         Clock.resume();
     }
-
-    resetButton.toggleClass('change_color');
-});
-
-resetButton.click(function () {
-    reset();
 });
