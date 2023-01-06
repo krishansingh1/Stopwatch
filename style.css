@@ -301,5 +301,7 @@ body {
 }
 
 .change_color {
-  display: none;
+  background-color: #70785e;
+  opacity: 0.6;
+  cursor: not-allowed !important;
 }
