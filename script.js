@@ -1,11 +1,14 @@
 const start_btn = $('#start_btn');
 const timer = $("#timer");
+const lap_btn = $(".lap_btn");
+const lap_time_container = $("#lap_timer_container");
 
 let startTime;
 let endTime;
 let clicked = false;
 let interval;
 let time;
+let count = 1;
 
 function calculate() {
     endTime = new Date().getTime();
@@ -18,7 +21,6 @@ function calculate() {
 }
 
 let Clock = {
-
     startTimer: function () {
         startTime = new Date().getTime();
         this.interval = setInterval(calculate, 10);
@@ -45,8 +47,25 @@ function changeIcon(anchor) {
 start_btn.click(function () {
     if (Clock.interval) {
         Clock.pause();
-        console.log(time);
     } else {
         Clock.resume();
     }
+
+    lap_btn.toggleClass('change_color');
+    lap_btn.prop('disabled', false);
 });
+
+lap_btn.prop('disabled', true);
+lap_btn.click(function () {
+    let lap = `
+        <div id="lap">
+            <div id="lap_count">
+                <p>${count}</p>
+                <span>Lap</span>
+            </div>
+                <p>${time}</p>
+        </div>
+    `
+    lap_time_container.append(lap);
+    count++;
+})
