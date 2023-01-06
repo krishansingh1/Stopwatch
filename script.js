@@ -1,4 +1,3 @@
-// console.log("StopWatch");
 const start_btn = $('#start_btn');
 const timer = $("#timer");
 const resetButton = $("#reset_btn");
@@ -10,11 +9,6 @@ let interval;
 let time;
 let modify_btn = $("#icon_class");
 
-function startTimer() {
-    startTime = new Date().getTime();
-    interval = setInterval(calculate, 10);
-}
-
 function calculate() {
     endTime = new Date().getTime();
     let elapsedTime = endTime - startTime;
@@ -24,6 +18,26 @@ function calculate() {
     time = minutes + ':' + seconds + '.' + milliseconds;
     timer.html(time);
 }
+
+let Clock = {
+
+    startTimer: function () {
+        var self = this;
+        startTime = new Date().getTime();
+        this.interval = setInterval(calculate, 10);
+    },
+
+    pause: function () {
+        clearInterval(this.interval);
+        delete this.interval;
+    },
+
+    resume: function () {
+        if (!this.interval) this.startTimer();
+    }
+}
+
+
 
 function changeIcon(anchor) {
     var icon = anchor.querySelector('i');
@@ -36,14 +50,13 @@ function reset() {
     timer.html(time);
 }
 
+// Clock.startTimer();
+
 start_btn.click(function () {
-    if (clicked) {
-        $(this).off('click');
-        clearInterval(interval);
-        clicked = false;
+    if (Clock.interval) {
+        Clock.pause();
     } else {
-        startTimer();
-        clicked = true;
+        Clock.resume();
     }
 
     resetButton.toggleClass('change_color');
