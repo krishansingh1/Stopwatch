@@ -8,7 +8,7 @@ let endTime;
 let clicked = false;
 let interval;
 let time;
-let btnClass = $("#icon_class");
+let modify_btn = $("#icon_class");
 
 function startTimer() {
     startTime = new Date().getTime();
@@ -46,9 +46,7 @@ start_btn.click(function () {
         clicked = true;
     }
 
-    if (btnClass.attr('class') == "fa-play") {
-        resetButton.prop('disabled', true);
-    }
+    resetButton.toggleClass('change_color');
 });
 
 resetButton.click(function () {

@@ -299,3 +299,7 @@ body {
   color: #ffffff;
   margin-top: 1rem;
 }
+
+.change_color {
+  display: none;
+}
