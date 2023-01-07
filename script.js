@@ -72,12 +72,42 @@
 const playButton = document.getElementById('start_btn');
 const resetButton = document.getElementById('reset_btn');
 const lapButton = document.getElementById('lap_btn');
+const icon = document.getElementById('icon');
+const second = document.querySelector('.sec');
 
+let isPlay = false
+let sec;
+let secCount = 0;
 
-const changeIcon = (anchor) => {
-    var icon = anchor.querySelector('i');
+const changeIcon = () => {
     icon.classList.toggle('fa-play');
     icon.classList.toggle('fa-pause');
 }
 
-const 
+const toggleButton = () => {
+    lapButton.classList.remove('hidden');
+    resetButton.classList.remove('hidden');
+}
+
+const Play = () => {
+    changeIcon();
+    if (!isPlay) {
+        sec = setInterval(() => {
+            second.innerHTML = `${++secCount} : `;
+        }, 1000);
+        isPlay = true;
+    } else {
+        clearInterval(sec);
+        isPlay = false;
+    }
+    toggleButton();
+}
+
+const Reset = () => {
+    Play();
+    lapButton.classList.add('hidden');
+    resetButton.classList.add('hidden');
+}
+
+playButton.addEventListener('click', Play);
+resetButton.addEventListener('click', Reset);
