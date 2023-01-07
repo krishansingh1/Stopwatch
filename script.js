@@ -72,6 +72,7 @@
 const playButton = document.getElementById('start_btn');
 const resetButton = document.getElementById('reset_btn');
 const lapButton = document.getElementById('lap_btn');
+const clearButton = document.querySelector('.lap-clear-button');
 const icon = document.getElementById('icon');
 const minute = document.querySelector('.minute');
 const second = document.querySelector('.sec');
@@ -145,8 +146,9 @@ const Reset = () => {
 
 const lap = () => {
     const time = `${minuteCount} : ${secCount} : ${milliSecCount}`;
-    lapContent += `
-        <div id="lap">
+    lapContent = document.createElement('div');
+    lapContent.setAttribute('id', 'lap');
+    lapContent.innerHTML = `
             <div id="lap_count">
                 <p>${++lapCount}</p>
                 <span>Lap</span>
@@ -154,9 +156,14 @@ const lap = () => {
                 <p>${time}</p>
         </div>
     `;
-    lapContainer.innerHTML = lapContent;
+    lapContainer.append(lapContent);
 };
+
+const clearAll = () => {
+    lapContainer.innerHTML = ``;
+}
 
 playButton.addEventListener('click', Play);
 resetButton.addEventListener('click', Reset);
 lapButton.addEventListener('click', lap);
+clearButton.addEventListener('click', clearAll);
