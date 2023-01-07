@@ -73,11 +73,21 @@ const playButton = document.getElementById('start_btn');
 const resetButton = document.getElementById('reset_btn');
 const lapButton = document.getElementById('lap_btn');
 const icon = document.getElementById('icon');
+const minute = document.querySelector('.minute');
 const second = document.querySelector('.sec');
+const milliSecond = document.querySelector('.millisec');
+const lapContainer = document.getElementById('lap_timer_container');
 
-let isPlay = false
+let isPlay = false;
+let isReset = false;
 let sec;
 let secCount = 0;
+let min;
+let minuteCount = 0;
+let milliSec;
+let milliSecCount = 0;
+let lapCount = 0;
+let lapContent;
 
 const changeIcon = () => {
     icon.classList.toggle('fa-play');
@@ -91,23 +101,62 @@ const toggleButton = () => {
 
 const Play = () => {
     changeIcon();
-    if (!isPlay) {
+    if (!isPlay && !isReset) {
+        min = setInterval(() => {
+            minute.innerHTML = `${++minuteCount} : `;
+        }, 60 * 1000);
         sec = setInterval(() => {
-            second.innerHTML = `${++secCount} : `;
+            if (secCount === 60) {
+                secCount = 0;
+            }
+            second.innerHTML = `&nbsp;${++secCount} : `;
         }, 1000);
+        milliSec = setInterval(() => {
+            if (milliSecCount === 100) {
+                milliSecCount = 0;
+            }
+            milliSecond.innerHTML = `&nbsp;${++milliSecCount}`;
+        }, 10);
         isPlay = true;
+        isReset = true;
     } else {
+        clearInterval(min);
         clearInterval(sec);
+        clearInterval(milliSec);
         isPlay = false;
+        isReset = false;
     }
     toggleButton();
 }
 
 const Reset = () => {
+    isReset = true;
     Play();
+    minuteCount = 0;
+    secCount = 0;
+    milliSecCount = 0;
     lapButton.classList.add('hidden');
     resetButton.classList.add('hidden');
+    minute.innerHTML = "0 : ";
+    second.innerHTML = "&nbsp;0 : ";
+    milliSecond.innerHTML = "&nbsp;0";
+
 }
+
+const lap = () => {
+    const time = `${minuteCount} : ${secCount} : ${milliSecCount}`;
+    lapContent += `
+        <div id="lap">
+            <div id="lap_count">
+                <p>${++lapCount}</p>
+                <span>Lap</span>
+            </div>
+                <p>${time}</p>
+        </div>
+    `;
+    lapContainer.innerHTML = lapContent;
+};
 
 playButton.addEventListener('click', Play);
 resetButton.addEventListener('click', Reset);
+lapButton.addEventListener('click', lap);
