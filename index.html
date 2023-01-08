@@ -11,12 +11,17 @@
 </head>
 
 <body>
+    <!-- Main Container of the Clock-->
     <main id="container">
         <h2 id="title">StopWatch</h2>
 
+        <!-- Clock -->
         <div id="clock">
+            <!-- Clock dot that rotate around the clock -->
             <div id="clock_dot"></div>
+            <!-- outer face of the clock -->
             <div class="outer-clock-face">
+                <!-- marking of the clock with denotes the milliseconds of the clock-->
                 <div class="marking marking-one"></div>
                 <div class="marking marking-two"></div>
                 <div class="marking marking-three"></div>
@@ -47,23 +52,29 @@
                 <div class="marking marking-twenty-eight"></div>
                 <div class="marking marking-twenty-nine"></div>
                 <div class="marking marking-thirty"></div>
+                <!-- inner face of the clock -->
                 <div class="inner-clock-face">
+                    <!-- clock readings -->
                     <span class="timer minute">0 :</span>
                     <span class="timer sec">&nbsp;0 :</span>
                     <span class="timer millisec">&nbsp;0</span>
                 </div>
             </div>
         </div>
+        <!-- buttons to perform all actions -->
         <div id="start_rest_btn_container">
             <button id="reset_btn" class="button hidden"><i class="fa-solid fa-clock-rotate-left"></i></button>
             <button id="start_btn" class="button"><i class="fa-solid fa-play" id="icon"></i></button>
             <button id="lap_btn" class="button hidden"><i class="fa-solid fa-stopwatch-20"></i></button>
         </div>
+        <!-- wrapper for the lap times -->
         <div id="lap_timer_container">
         </div>
+        <!-- button to clear laps -->
         <button class="lap-clear-button">Clear All</button>
     </main>
 
+    <!-- footer -->
     <footer id="footer">
         <p>&copy; Krishan Kumar 2023</p>
     </footer>
