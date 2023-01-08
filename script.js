@@ -107,7 +107,7 @@ const Play = () => {
             minute.innerHTML = `${++minuteCount} : `;
         }, 60 * 1000);
         sec = setInterval(() => {
-            if (secCount === 60) {
+            if (secCount === 59) {
                 secCount = 0;
             }
             second.innerHTML = `&nbsp;${++secCount} : `;
