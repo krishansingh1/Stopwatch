@@ -17,7 +17,7 @@ body {
   width: 30%;
   height: auto;
   margin: 0 auto;
-  padding-bottom: 1.5rem;
+  padding-bottom: 4.1rem;
   border-radius: 1rem;
 }
 
@@ -36,11 +36,10 @@ body {
     0 -3px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
-  margin-left: 5.2rem;
-  width: 13rem;
-  height: 13rem;
+  margin-left: 5.85rem;
+  width: 14rem;
+  height: 14rem;
   border-radius: 50%;
-  /* animation: rotation 1s infinite linear; */
 }
 
 .clock_dot {
@@ -71,8 +70,8 @@ body {
 #clock_dot::before {
   content: "";
   position: absolute;
-  top: 1rem;
-  left: 6.29rem;
+  top: 1.3rem;
+  left: 6.75rem;
   border: solid #31456a;
   border-radius: 50%;
   z-index: 2;
@@ -257,10 +256,10 @@ body {
 
 .inner-clock-face {
   position: absolute;
-  top: 20.9%;
-  left: 42.86%;
-  width: 11.3rem;
-  height: 11.3rem;
+  top: 19.1%;
+  left: 42.78%;
+  width: 12.5rem;
+  height: 12.5rem;
   background: #e3edf7;
   border-radius: 100%;
   z-index: 1;
