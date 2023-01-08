@@ -40,17 +40,42 @@ body {
   width: 13rem;
   height: 13rem;
   border-radius: 50%;
+  /* animation: rotation 1s infinite linear; */
+}
+
+.clock_dot {
+  position: relative;
+  animation: rotation 10s infinite linear;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.clock_dot::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 6.29rem;
+  border: solid #31456a;
+  border-radius: 50%;
+  z-index: 2;
 }
 
 #clock_dot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+#clock_dot::before {
   content: "";
   position: absolute;
+  top: 1rem;
+  left: 6.29rem;
   border: solid #31456a;
   border-radius: 50%;
-  margin-left: 6.25rem;
-  margin-top: 20px;
   z-index: 2;
-  animation: rotation 1s infinite linear;
 }
 
 @keyframes rotation {
@@ -87,7 +112,7 @@ body {
   position: absolute;
   width: 3px;
   height: 34%;
-  margin-top: 5px;
+  top: 7.05rem;
   background: #31456a;
   z-index: 0;
   left: 50%;

@@ -78,6 +78,7 @@ const minute = document.querySelector('.minute');
 const second = document.querySelector('.sec');
 const milliSecond = document.querySelector('.millisec');
 const lapContainer = document.getElementById('lap_timer_container');
+const clockDot = document.getElementById('clock_dot');
 
 let isPlay = false;
 let isReset = false;
@@ -102,6 +103,7 @@ const toggleButton = () => {
 
 const Play = () => {
     changeIcon();
+    clockDot.classList.add('clock_dot');
     if (!isPlay && !isReset) {
         min = setInterval(() => {
             minute.innerHTML = `${++minuteCount} : `;
@@ -124,6 +126,7 @@ const Play = () => {
         clearInterval(min);
         clearInterval(sec);
         clearInterval(milliSec);
+        clockDot.classList.remove('clock_dot');
         isPlay = false;
         isReset = false;
     }
