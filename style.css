@@ -42,7 +42,7 @@ body {
   border-radius: 50%;
 }
 
-#clock_dot {
+#clock::before {
   content: "";
   position: absolute;
   border: solid #31456a;
@@ -50,27 +50,12 @@ body {
   margin-left: 6.25rem;
   margin-top: 20px;
   z-index: 2;
-}
-.animation.rotation {
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-name: rotation;
-  animation-name: rotation;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  transform-origin: right center;
+  animation: rotation 3s infinite linear;
 }
 
 @keyframes rotation {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-    transform: rotate3d(0, 0, 1, 0deg);
-  }
-  to {
-    -webkit-transform: rotate3d(0, 0, 1, 360deg);
-    transform: rotate3d(0, 0, 1, 360deg);
+  0% {
+    transform: rotate(-360deg);
   }
 }
 
