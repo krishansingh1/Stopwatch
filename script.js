@@ -109,6 +109,7 @@ const lap = () => {
 
 //function to clear all laps together
 const clearAll = () => {
+    lapCount = 0;
     lapContainer.innerHTML = ``;
 }
 
